@@ -111,6 +111,23 @@
       <?php
     }
 
+    public function sanitize( $input ){
+      $new_input = [];
+
+      $arrConfig = $this->plugin_configurationFields;
+
+      for ($II = 0; $II < count($arrConfig); $II++) {
+        for ($JJ = 0; $JJ < count($arrConfig[$II]['fields']); $JJ++) {
+          if( isset( $arrConfig[$II]['fields'][$JJ]['label_under_slug']) ){
+              $valueUnderLabel = $arrConfig[$II]['fields'][$JJ]['label_under_slug'];
+              $new_input[ $valueUnderLabel ] = sanitize_text_field( $input[ $valueUnderLabel ] );
+          }
+        }
+      }
+
+      return $new_input;
+    }
+
     public function pfDev_add_settings_link($links){
       $settings_link = '<a href="admin.php?page=' . $this->plugin_slug . '">' . __('Settings', $this->plugin_slug) . '</a>';
       array_unshift($links, $settings_link);
