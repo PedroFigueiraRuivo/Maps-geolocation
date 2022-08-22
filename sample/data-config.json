@@ -1,0 +1,18 @@
+{
+  "default-datas": {
+    "coords": {
+      "lat": "-34.397",
+      "lng": "150.604"
+    },
+    "zoom": 10,
+    "url": "https://homolog0.pedrofigueira.dev/lovilu.kmz",
+    "title": "Revendedores mais próximos de você",
+    "notification": "Permita que o navegador acesse a sua localização para apresentar os revendedores mais próximos. Os dados da sua localização serão usados apenas para o fim citado e ficarão armazenados até que essa aba seja fechada.",
+    "text-button": "Mostrar revendedores mais próximos"
+  },
+  "user-datas": {
+    "zoom": 8,
+    "message": "Sua localização!"
+  },
+  "css": ".teste { color: red; }"
+}
