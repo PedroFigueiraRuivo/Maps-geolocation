@@ -17,19 +17,30 @@
   </style>
 
 </head>
-<body>
-  <div class="container" id="map">
-    Carregando...
+<body class="container">
+  <div class="pfDev--pWP-mg-map-container">
+    <div class="map-info">
+      <h2 class="map-info__title">Title</h2>
+      <div class="map-info__notif" pfDev--pWP-mg="box-notification">
+        <p class="map-info__notif__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur vero cumque, labore magni tempora harum!</p>
+      </div>
+      <div class="map-info__list-closest" pfDev--pWP-mg="box-list-closest">
+
+      </div>
+    </div>
+    <div id="map">
+      Carregando...
+    </div>
   </div>
 
-  <script src="./js/class-construct-map.js"></script>
-  <script>
-    let pfdev__maps_geolocation__ajax = {
-      url: 'http://127.0.0.1:5500/sample/data-config.json'
-    };
+  <script type="module" src="./js/scripts.js"></script>
+  <script type="module">
+    // let pfdev__maps_geolocation__ajax = {
+    //   url: 'http://127.0.0.1:5500/sample/data-config.json'
+    // };
 
-    const map = new pfDev__mapsGeolocation(pfdev__maps_geolocation__ajax.url, 'map');
-    map.buildMap();
+    // const map = new pfDev__mapsGeolocation(pfdev__maps_geolocation__ajax.url, 'map');
+    // map.buildMap();
   </script>
 </body>
 </html>

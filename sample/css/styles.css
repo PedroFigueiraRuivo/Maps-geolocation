@@ -1,0 +1,26 @@
+.pfDev--pWP-mg-map-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 8px;
+  height: 80%;
+}
+
+.map-info {
+  background-color: rgb(241, 241, 241);
+  padding: 20px;
+}
+
+.map-info__notif__button,
+.map-info__notif__text {
+  font-size: 0.7rem;
+  line-height: 1rem;
+  text-align: left;
+}
+
+.map-info__notif__button {
+  cursor: pointer;
+  border: 1px solid rgb(100, 189, 12);
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  background-color: #eee;
+}

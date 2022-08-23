@@ -1,35 +1,8 @@
-const pfDev__mapsGeolocation = {
-  listCallbacks: [],
+import pfDev__mapsGeolocation from './modules/class-construct-map.js';
 
-  async loadMapsData(url) {
-    const postData = {
-      action: 'pfdev__maps_geolocation'
-    };
+let pfdev__maps_geolocation__ajax = {
+  url: 'http://127.0.0.1:5500/sample/data-config.json'
+};
 
-    const configFetch = {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      data: postData,
-    }
-
-    const response = await fetch(url, configFetch);
-
-    return response;
-  },
-
-  buildMap(jsonData, containerId) {
-    const elementRoot = document.getElementById('map');
-    const mapOptions = {
-      center: {
-        lat: -34.397,
-        lng: 150.644
-      },
-      zoom: 11,
-      mapTypeId: 'roadmap', // roadmap, satellite, hybrid, terrain
-    };
-
-    this.map = new google.maps.Map(elementRoot, mapOptions);
-  }
-}
+const map = new pfDev__mapsGeolocation(pfdev__maps_geolocation__ajax.url, 'map');
+map.init();
